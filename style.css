@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --fundo: #080b18;
+    --painel: #11182b;
+    --borda: #293651;
+    --roxo: #a78bfa;
+    --azul: #67e8f9;
+    --texto: #f0f4ff;
+    --suave: #a9b5cc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: var(--texto);
+    background:
+        radial-gradient(ellipse at top, #20234a 0%, transparent 48%),
+        var(--fundo);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+.cabecalho {
+    padding: 52px 20px 32px;
+    text-align: center;
+}
+
+.identificacao {
+    color: var(--azul);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Orbitron', sans-serif;
+    line-height: 1.4;
+}
+
+h1 {
+    margin: 12px 0;
+    font-size: clamp(2.2rem, 7vw, 4rem);
+    letter-spacing: 4px;
+}
+
+h1 span {
+    color: var(--roxo);
+    text-shadow: 0 0 25px #a78bfa66;
+}
+
+.cabecalho > p:last-child {
+    color: var(--suave);
+}
+
+.container {
+    width: min(760px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+.painel {
+    padding: 32px;
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    background: linear-gradient(145deg, #151d33, #0e1425);
+    box-shadow: 0 20px 60px #00000035;
+}
+
+.titulo-secao {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.numero {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border: 1px solid var(--roxo);
+    border-radius: 12px;
+    color: var(--roxo);
+    font-family: 'Orbitron', sans-serif;
+}
+
+h2 {
+    margin: 0 0 8px;
+    font-size: 1.3rem;
+}
+
+.titulo-secao p {
+    margin: 0;
+    color: var(--suave);
+}
+
+.campo {
+    margin-bottom: 22px;
+}
+
+.campo label,
+legend {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    outline: none;
+    background: #0a1020;
+    color: var(--texto);
+    font: inherit;
+    color-scheme: dark;
+}
+
+input:focus-visible {
+    border-color: var(--azul);
+    outline: 2px solid #67e8f944;
+    outline-offset: 2px;
+}
+
+fieldset {
+    min-width: 0;
+    margin: 28px 0;
+    padding: 20px;
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+}
+
+legend {
+    max-width: 100%;
+    padding: 0 6px;
+    font-size: 0.98rem;
+}
+
+.opcao {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    background: #ffffff05;
+    color: #d5deef;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.opcao:hover {
+    border-color: #a78bfa80;
+    background: #a78bfa10;
+}
+
+.opcao input {
+    flex-shrink: 0;
+    width: 17px;
+    height: 17px;
+    margin-top: 4px;
+    accent-color: var(--roxo);
+}
+
+.botao-principal,
+.botao-secundario {
+    width: 100%;
+    min-height: 52px;
+    padding: 14px 18px;
+    border: 0;
+    border-radius: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.botao-principal {
+    color: #080b18;
+    background: linear-gradient(90deg, var(--azul), var(--roxo));
+}
+
+.botao-secundario {
+    margin-top: 24px;
+    border: 1px solid var(--roxo);
+    color: var(--texto);
+    background: transparent;
+}
+
+.botao-principal:hover,
+.botao-secundario:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.12);
+}
+
+button:focus-visible {
+    outline: 2px solid var(--azul);
+    outline-offset: 4px;
+}
+
+.mensagem {
+    color: #fda4af;
+    font-weight: 500;
+}
+
+.resultado {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.resultado h2 {
+    margin-top: 12px;
+    font-size: 1.7rem;
+}
+
+.saudacao {
+    color: var(--suave);
+}
+
+.resultado img {
+    display: block;
+    width: 100%;
+    max-width: 440px;
+    max-height: 360px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    margin: 24px auto;
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    background: #0a1020;
+}
+
+.categoria {
+    display: inline-block;
+    padding: 5px 14px;
+    border: 1px solid #a78bfa77;
+    border-radius: 30px;
+    color: var(--azul);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.resultado h3 {
+    margin: 12px 0;
+    color: var(--roxo);
+    font-size: 1.35rem;
+}
+
+.resultado > p:not(.identificacao, .saudacao, .categoria, .detalhes) {
+    color: var(--suave);
+}
+
+.recomendacao {
+    margin-top: 24px;
+    padding: 20px;
+    border-left: 3px solid var(--azul);
+    border-radius: 8px;
+    background: #67e8f90c;
+    text-align: left;
+}
+
+.recomendacao h4 {
+    margin: 0 0 8px;
+    font-size: 0.9rem;
+}
+
+.recomendacao p {
+    margin: 0;
+    color: var(--suave);
+}
+
+.detalhes {
+    margin-top: 20px;
+    color: var(--suave);
+    font-size: 0.9rem;
+}
+
+.codigo {
+    padding: 20px;
+    color: var(--roxo);
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+footer {
+    padding: 20px;
+    color: #74809a;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    .cabecalho {
+        padding: 32px 16px 24px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .identificacao {
+        font-size: 0.65rem;
+        letter-spacing: 2px;
+    }
+
+    .container {
+        width: calc(100% - 20px);
+    }
+
+    .painel {
+        padding: 18px 14px;
+        border-radius: 14px;
+    }
+
+    .titulo-secao {
+        gap: 10px;
+    }
+
+    .numero {
+        width: 38px;
+        height: 38px;
+    }
+
+    h2 {
+        font-size: 1.05rem;
+    }
+
+    fieldset {
+        padding: 12px 10px;
+        margin: 22px 0;
+    }
+
+    legend {
+        font-size: 0.9rem;
+    }
+
+    .opcao {
+        gap: 9px;
+        padding: 10px 7px;
+        font-size: 0.9rem;
+    }
+
+    .botao-principal,
+    .botao-secundario {
+        font-size: 0.75rem;
+    }
+
+    .resultado h2 {
+        font-size: 1.3rem;
+    }
+
+    .resultado h3 {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        font-size: 0.6rem;
+        letter-spacing: 1px;
+    }
+}

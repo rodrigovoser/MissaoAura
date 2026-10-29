@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubra seu perfil para a Missão Aura de 2089.">
+    <title>Missão Aura</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="sketch.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <p class="identificacao">PROJETO ESPACIAL • ANO 2089</p>
+        <h1>MISSÃO <span>AURA</span></h1>
+        <p>Descubra seu perfil e encontre seu lugar na expedição.</p>
+    </header>
+
+    <main class="container">
+        <section class="painel" id="formulario">
+            <div class="titulo-secao">
+                <span class="numero">01</span>
+                <div>
+                    <h2>Prepare-se, explorador!</h2>
+                    <p>Responda às perguntas para descobrir sua função.</p>
+                </div>
+            </div>
+
+            <form id="testeAura">
+                <div class="campo">
+                    <label for="nome">Nome do candidato:
+                    </label>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome"
+                        maxlength="80"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="nascimento">Data de nascimento</label>
+                    <input
+                        type="date"
+                        id="nascimento"
+                        name="nascimento"
+                        required
+                    >
+                </div>
+
+                <fieldset>
+                    <legend>1. Qual atividade mais combina com você?</legend>
+                    <label class="opcao">
+                        <input type="radio" name="p1" value="1" required>
+                        Construir equipamentos e resolver problemas técnicos.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p1" value="2">
+                        Pesquisar e analisar descobertas científicas.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p1" value="3">
+                        Explorar lugares desconhecidos.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p1" value="4">
+                        Organizar a equipe e planejar estratégias.
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Você encontrou um sinal misterioso no planeta. O que faz?</legend>
+                    <label class="opcao">
+                        <input type="radio" name="p2" value="1" required>
+                        Construo um dispositivo para investigar o sinal.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p2" value="2">
+                        Analiso os dados e procuro explicações.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p2" value="3">
+                        Vou até o local para descobrir sua origem.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p2" value="4">
+                        Organizo a equipe antes de tomar uma decisão.
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>3. Qual seria sua maior contribuição para a missão?</legend>
+                    <label class="opcao">
+                        <input type="radio" name="p3" value="1" required>
+                        Manter os sistemas funcionando.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p3" value="2">
+                        Descobrir informações sobre o planeta.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p3" value="3">
+                        Encontrar novos caminhos e recursos.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p3" value="4">
+                        Coordenar as tarefas e os objetivos.
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>4. Como você prefere enfrentar um desafio?</legend>
+                    <label class="opcao">
+                        <input type="radio" name="p4" value="1" required>
+                        Testando soluções práticas.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p4" value="2">
+                        Investigando as causas com atenção.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p4" value="3">
+                        Experimentando novas possibilidades.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p4" value="4">
+                        Criando um plano de ação.
+                    </label>
+                </fieldset>
+
+                <p id="mensagem" class="mensagem" role="alert"></p>
+
+                <button type="submit" class="botao-principal">
+                    DESCOBRIR MEU PERFIL ✦
+                </button>
+            </form>
+        </section>
+
+        <section id="resultado" class="painel resultado" hidden
+            aria-live="polite">
+            <p class="identificacao">RELATÓRIO DA EXPEDIÇÃO • 2089</p>
+            <h2>Perfil identificado!</h2>
+            <p id="saudacao" class="saudacao"></p>
+
+            <img id="imagemPerfil"src="" alt="Ilustração do perfil">
+
+            <p id="categoria" class="categoria"></p>
+            <h3 id="nomePerfil"></h3>
+            <p id="descricao"></p>
+
+            <div class="recomendacao">
+                <h4>🚀 Sua recomendação para a missão</h4>
+                <p id="recomendacao"></p>
+            </div>
+
+            <p id="detalhes" class="detalhes"></p>
+
+            <button type="button" id="refazer" class="botao-secundario">
+                -refaça-
+            </button>
+        </section>
+
+        <p class="codigo">aura67</p>
+    </main>
+
+    <footer>
+        <p>MISSÃO AURA © 2089 • EXPLORE O ESPAÇO!</p>
+    </footer>
+</body>
+</html>
